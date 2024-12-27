@@ -50,8 +50,8 @@ public class RangeBar extends View {
     private static final float DEFAULT_BAR_WEIGHT_PX = 2;
     private static final int DEFAULT_BAR_COLOR = Color.LTGRAY;
     private static final float DEFAULT_CONNECTING_LINE_WEIGHT_PX = 4;
-    private static final int DEFAULT_THUMB_IMAGE_NORMAL = R.drawable.seek_thumb_normal;
-    private static final int DEFAULT_THUMB_IMAGE_PRESSED = R.drawable.seek_thumb_pressed;
+    private static final int DEFAULT_THUMB_IMAGE_NORMAL = 0;
+    private static final int DEFAULT_THUMB_IMAGE_PRESSED = 1;
 
     // Corresponds to android.R.color.holo_blue_light.
     private static final int DEFAULT_CONNECTING_LINE_COLOR = 0xff33b5e5;
@@ -572,7 +572,7 @@ public class RangeBar extends View {
 
             // Sets the values of the user-defined attributes based on the XML
             // attributes.
-            final Integer tickCount = ta.getInteger(R.styleable.RangeBar_tickCount, DEFAULT_TICK_COUNT);
+            final Integer tickCount = DEFAULT_TICK_COUNT;
 
             if (isValidTickCount(tickCount)) {
 
@@ -594,17 +594,17 @@ public class RangeBar extends View {
             mTickHeightDP =  DEFAULT_TICK_HEIGHT_DP;
             mBarWeight = DEFAULT_BAR_WEIGHT_PX;
             mBarColor =  DEFAULT_BAR_COLOR;
-            mConnectingLineWeight = DEFAULT_CONNECTING_LINE_WEIGHT_PX);
+            mConnectingLineWeight = DEFAULT_CONNECTING_LINE_WEIGHT_PX;
             mConnectingLineColor = 
-                    DEFAULT_CONNECTING_LINE_COLOR);
-            mThumbRadiusDP =  DEFAULT_THUMB_RADIUS_DP);
+                    DEFAULT_CONNECTING_LINE_COLOR;
+            mThumbRadiusDP =  DEFAULT_THUMB_RADIUS_DP;
             mThumbImageNormal = 
-                    DEFAULT_THUMB_IMAGE_NORMAL);
+                    DEFAULT_THUMB_IMAGE_NORMAL;
             mThumbImagePressed = 
-                    DEFAULT_THUMB_IMAGE_PRESSED);
-            mThumbColorNormal =  DEFAULT_THUMB_COLOR_NORMAL);
+                    DEFAULT_THUMB_IMAGE_PRESSED;
+            mThumbColorNormal =  DEFAULT_THUMB_COLOR_NORMAL;
             mThumbColorPressed = 
-                    DEFAULT_THUMB_COLOR_PRESSED);
+                    DEFAULT_THUMB_COLOR_PRESSED;
             mIsThumbAnimate =  true;
         } finally {
 
