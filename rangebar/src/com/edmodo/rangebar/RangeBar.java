@@ -16,7 +16,7 @@ package com.edmodo.rangebar;
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.TypedArray;
+//import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Build;
@@ -566,7 +566,7 @@ public class RangeBar extends View {
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void rangeBarInit(Context context, AttributeSet attrs) {
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.RangeBar, 0, 0);
+    //    TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.RangeBar, 0, 0);
 
         try {
 
@@ -591,25 +591,24 @@ public class RangeBar extends View {
                 Log.e(TAG, "tickCount less than 2; invalid tickCount. XML input ignored.");
             }
 
-            mTickHeightDP = ta.getDimension(R.styleable.RangeBar_tickHeight, DEFAULT_TICK_HEIGHT_DP);
-            mBarWeight = ta.getDimension(R.styleable.RangeBar_barWeight, DEFAULT_BAR_WEIGHT_PX);
-            mBarColor = ta.getColor(R.styleable.RangeBar_barColor, DEFAULT_BAR_COLOR);
-            mConnectingLineWeight = ta.getDimension(R.styleable.RangeBar_connectingLineWeight,
-                    DEFAULT_CONNECTING_LINE_WEIGHT_PX);
-            mConnectingLineColor = ta.getColor(R.styleable.RangeBar_connectingLineColor,
+            mTickHeightDP =  DEFAULT_TICK_HEIGHT_DP;
+            mBarWeight = DEFAULT_BAR_WEIGHT_PX;
+            mBarColor =  DEFAULT_BAR_COLOR;
+            mConnectingLineWeight = DEFAULT_CONNECTING_LINE_WEIGHT_PX);
+            mConnectingLineColor = 
                     DEFAULT_CONNECTING_LINE_COLOR);
-            mThumbRadiusDP = ta.getDimension(R.styleable.RangeBar_thumbRadius, DEFAULT_THUMB_RADIUS_DP);
-            mThumbImageNormal = ta.getResourceId(R.styleable.RangeBar_thumbImageNormal,
+            mThumbRadiusDP =  DEFAULT_THUMB_RADIUS_DP);
+            mThumbImageNormal = 
                     DEFAULT_THUMB_IMAGE_NORMAL);
-            mThumbImagePressed = ta.getResourceId(R.styleable.RangeBar_thumbImagePressed,
+            mThumbImagePressed = 
                     DEFAULT_THUMB_IMAGE_PRESSED);
-            mThumbColorNormal = ta.getColor(R.styleable.RangeBar_thumbColorNormal, DEFAULT_THUMB_COLOR_NORMAL);
-            mThumbColorPressed = ta.getColor(R.styleable.RangeBar_thumbColorPressed,
+            mThumbColorNormal =  DEFAULT_THUMB_COLOR_NORMAL);
+            mThumbColorPressed = 
                     DEFAULT_THUMB_COLOR_PRESSED);
-            mIsThumbAnimate = ta.getBoolean(R.styleable.RangeBar_thumbAnimate, true);
+            mIsThumbAnimate =  true;
         } finally {
 
-            ta.recycle();
+         //   ta.recycle();
         }
 
     }
